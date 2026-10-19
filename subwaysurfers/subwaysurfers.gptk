@@ -1,0 +1,35 @@
+# Subway Surfers -- PortMaster gptokeyb profile
+# Native gamepad, virtual cursor, and touch-swipe are handled by subwaysurfers-nextos directly.
+# Exit: SELECT+START.
+
+back = esc
+start = enter
+
+a = enter
+b = down
+x = x
+y = y
+
+r1 = \"
+r2 = mouse_left
+l1 = \"
+l2 = \"
+
+up = up
+down = down
+left = left
+right = right
+
+left_analog_up = up
+left_analog_down = down
+left_analog_left = left
+left_analog_right = right
+
+# Explicitly unbind right analog stick so gptokeyb NEVER sends arrow keys or mouse motion
+right_analog_up = \"
+right_analog_down = \"
+right_analog_left = \"
+right_analog_right = \"
+
+mouse_scale = 128
+deadzone = 4000

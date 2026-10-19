@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Subway Surfers.sh</path>
+    <name>Subway Surfers</name>
+    <desc>DASH as fast as you can! DODGE the oncoming trains! Help Jake, Tricky and Fresh escape from the grumpy Inspector and his dog in this iconic endless runner ported natively to handhelds via NextOS.</desc>
+    <developer>Kiloo / SYBO Games</developer>
+    <publisher>SYBO Games</publisher>
+    <genre>Endless Runner / Action</genre>
+    <players>1</players>
+  </game>
+</gameList>

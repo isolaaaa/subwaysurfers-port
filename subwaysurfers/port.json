@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "name": "subwaysurfers.zip",
+  "items": [
+    "Subway Surfers.sh",
+    "subwaysurfers/"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Subway Surfers",
+    "arch": [
+      "aarch64"
+    ],
+    "min_glibc": "2.17",
+    "runtime": []
+  }
+}

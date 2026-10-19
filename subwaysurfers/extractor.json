@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "id": "subwaysurfers-nextos",
+  "version": "2.30.2-26120",
+  "title": "SUBWAY SURFERS",
+  "abi_order": [
+    "arm64-v8a"
+  ],
+  "input": {
+    "search_dirs": [
+      "gamedata",
+      "."
+    ],
+    "prefer_first_nonempty": true,
+    "sniff_all_in_primary": true,
+    "packages": [
+      "com.kiloo.subwaysurf"
+    ],
+    "max_files": 64,
+    "max_bundle_apks": 32,
+    "max_member_bytes": 536870912,
+    "max_bundle_bytes": 1073741824
+  },
+  "extract": [
+    {
+      "id": "android-native-loader",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libmain.so"
+        ]
+      },
+      "destination": "lib/libmain.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 6424,
+        "sha256": "18f6036ebe0a9602259a8fadc06dbe391b2e6c42a714ef80185d88dd36501ab8"
+      }
+    },
+    {
+      "id": "android-unity-player",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libunity.so"
+        ]
+      },
+      "destination": "lib/libunity.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 17543952,
+        "sha256": "0d884004adb00f66832746dfcf127c0da1f60da227ba7cff04dd482dcc3de70c"
+      }
+    },
+    {
+      "id": "android-il2cpp-runtime",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libil2cpp.so"
+        ]
+      },
+      "destination": "lib/libil2cpp.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 56186672,
+        "sha256": "cbbbd2f5f204b41f290a3c3e84d8add0203984884df362d8478643bc3ae976e0"
+      }
+    },
+    {
+      "id": "android-firebase-app",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libFirebaseCppApp-8_8_0.so"
+        ]
+      },
+      "destination": "lib/libFirebaseCppApp-8_8_0.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 5665688,
+        "sha256": "bd421f8b47c3fb8a0bdf43489666d6f9afda329407efbcaa8ec0bfd39c9b764d"
+      }
+    },
+    {
+      "id": "android-quack",
+      "source": {
+        "kind": "entry",
+        "patterns": [
+          "lib/{abi}/libquack.so"
+        ]
+      },
+      "destination": "lib/libquack.so",
+      "validate": {
+        "type": "file",
+        "elf_machine": "{abi}",
+        "size": 1300792,
+        "sha256": "7f8805e7555236e8716c34bcc5e2933400f728722284f39fe9329bd5f54ef7b4"
+      }
+    },
+    {
+      "id": "android-unity-data",
+      "source": {
+        "kind": "entries",
+        "patterns": [
+          "assets/**"
+        ],
+        "strip_prefix": "assets/"
+      },
+      "destination": "assets",
+      "validate": {
+        "type": "tree",
+        "required_paths": [
+          "bin/Data/boot.config",
+          "bin/Data/globalgamemanagers",
+          "bin/Data/Managed/Metadata/global-metadata.dat"
+        ]
+      }
+    },
+    {
+      "id": "owner-apk",
+      "source": {
+        "kind": "container"
+      },
+      "destination": "game.apk",
+      "validate": {
+        "type": "file",
+        "min_size": 100000000,
+        "max_size": 350000000,
+        "magic_hex": "504b0304"
+      }
+    }
+  ],
+  "hooks": [],
+  "validate": [
+    {
+      "path": "lib/libmain.so",
+      "type": "file",
+      "elf_machine": "arm64-v8a",
+      "size": 6424,
+      "sha256": "18f6036ebe0a9602259a8fadc06dbe391b2e6c42a714ef80185d88dd36501ab8"
+    },
+    {
+      "path": "lib/libunity.so",
+      "type": "file",
+      "elf_machine": "arm64-v8a",
+      "size": 17543952,
+      "sha256": "0d884004adb00f66832746dfcf127c0da1f60da227ba7cff04dd482dcc3de70c"
+    },
+    {
+      "path": "lib/libil2cpp.so",
+      "type": "file",
+      "elf_machine": "arm64-v8a",
+      "size": 56186672,
+      "sha256": "cbbbd2f5f204b41f290a3c3e84d8add0203984884df362d8478643bc3ae976e0"
+    },
+    {
+      "path": "assets",
+      "type": "tree",
+      "required_paths": [
+        "bin/Data/boot.config",
+        "bin/Data/globalgamemanagers",
+        "bin/Data/Managed/Metadata/global-metadata.dat"
+      ]
+    },
+    {
+      "path": "game.apk",
+      "type": "file",
+      "min_size": 100000000,
+      "max_size": 350000000,
+      "magic_hex": "504b0304"
+    }
+  ],
+  "commit": [
+    "lib",
+    "assets",
+    "game.apk"
+  ],
+  "marker": ".nxextract-subwaysurfers.json",
+  "space": {
+    "safety_bytes": 300000000
+  },
+  "log": "nxextract.log",
+  "ui_success_seconds": 1,
+  "ui_error_seconds": 5
+}
