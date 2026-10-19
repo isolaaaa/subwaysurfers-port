@@ -27,35 +27,9 @@ To run this game, you need the official Android APK:
    - `Subway Surfers.sh` into `roms/ports/`
    - The entire `subwaysurfers` directory into `roms/ports/`
 
-The resulting directory structure on your SD card should look like:
-```text
-roms/ports/
-├── Subway Surfers.sh
-└── subwaysurfers/
-    ├── subwaysurfers-nextos
-    ├── Subway Surfers.sh
-    ├── extractor.json
-    ├── subwaysurfers.gptk
-    ├── gameinfo.xml
-    ├── port.json
-    ├── INSTALLATION.md
-    ├── README.md
-    └── nxextract/
-        ├── nxextract.py
-        ├── nxextract-ui
-        ├── nxextract-runtime-env.sh
-        └── run-extractor.sh
-```
 
 ### Step 2: Add Game Data (APK)
-Copy your Subway Surfers v2.30.2 APK into `roms/ports/subwaysurfers/gamedata/` (or directly in `roms/ports/subwaysurfers/`).
-Nama file APK bebas (tidak wajib bernama `game.apk`):
-```text
-roms/ports/subwaysurfers/gamedata/subway.apk
-roms/ports/subwaysurfers/gamedata/subway-surf.apk
-roms/ports/subwaysurfers/gamedata/subway-2.30.2.apk
-(atau game.apk)
-```
+Copy your Subway Surfers v2.30.2 APK into `/ports/subwaysurfers/gamedata/`
 
 ### Step 3: Launch
 1. On your device, open the **Ports** menu and select **Subway Surfers**.
