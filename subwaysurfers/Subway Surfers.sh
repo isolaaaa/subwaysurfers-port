@@ -269,6 +269,7 @@ fi
 # 12. Run the native AArch64 executable
 echo "Launching subwaysurfers-nextos..."
 chmod +x "$GAMEDIR/subwaysurfers-nextos" 2>/dev/null || true
+[ -f "$GAMEDIR/libnet_fix.so" ] && export LD_PRELOAD="$GAMEDIR/libnet_fix.so${LD_PRELOAD:+:$LD_PRELOAD}"
 "$GAMEDIR/subwaysurfers-nextos" "$GAMEDIR" & game_pid=$!
 wait "$game_pid"
 STATUS=$?
